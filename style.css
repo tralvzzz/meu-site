@@ -1,0 +1,172 @@
+/* Reset e corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    color: white;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #0056b3;
+}
+
+/* Navegação principal */
+.main-nav {
+    display: flex;
+    flex-wrap: wrap; /* Botões quebram linha em telas menores */
+    justify-content: center;
+    gap: 20px; /* Espaço entre botões */
+    margin-bottom: 40px;
+}
+
+/* Estilo dos botões */
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    background: white;
+    color: #5a00c0;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-3px);
+}
+
+.button:active {
+    background-color: #004085;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Container central */
+.center-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Cartão principal com efeito de vidro */
+.login-card {
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+
+.login-card h1 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+/* Seções escondidas inicialmente */
+.secao {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    text-align: left;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+/* Caixa do menu */
+.menu-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Estilo dos itens da lista */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Estilo dos links */
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #00e6e6;
+}
